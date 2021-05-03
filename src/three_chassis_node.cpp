@@ -95,11 +95,6 @@ int main(int argc, char **argv) {
     std::string serial_port; //串口端口号
     int baud_rate = 115200;  //串口波特率
 
-    std::vector<std::string> vs;
-    nh.getParamNames(vs);
-    for(auto s:vs){
-        ROS_INFO("%s",s.c_str());
-    }
     if (nh.hasParam("serial_port")) {
         nh.getParam("serial_port", serial_port);
     }
