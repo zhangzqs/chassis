@@ -1,0 +1,15 @@
+<launch>
+    <node pkg="chassis" type="three_chassis_node" name="chassis" output="screen">
+        
+<!--        <param name="serial_port" value="/dev/ttyUSB0"/>-->
+<!--        <param name="baud_rate" value="115200"/>-->
+
+<!--        底盘运动系数-->
+        <param name="k" value="6921.54"/>
+
+<!--        底盘运动半径-->
+        <param name="radius" value="0.1543"/>
+    </node>
+
+    <node pkg="chassis" type="teleop.py" name="keyboard_teleop"></node>
+</launch>
